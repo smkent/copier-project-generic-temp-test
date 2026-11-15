@@ -9,6 +9,9 @@ Test project created using copier-project's generic project template
 
 This is a test project for testing test stuff.
 
+This is not a real breaking change but I'm making a test change to test the
+label in the release notes.
+
 ## License
 
 Copyright (C) 2026 Stephen Kent and contributors
