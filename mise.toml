@@ -44,7 +44,7 @@ run = [{ task = "lint" }, { task = "test" }]
 [tasks.release]
 description = "Create and push a release tag (patch/minor/major)"
 raw_args = true
-run = "bump-my-version --config-file .bumpversion.toml bump -v"
+run = "bump-my-version bump -v"
 
 [tasks.secretscan]
 description = "Scan git history for secrets"
