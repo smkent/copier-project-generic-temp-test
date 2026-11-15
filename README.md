@@ -7,6 +7,8 @@ Test project created using copier-project's generic project template
 [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?logo=renovatebot)](https://renovatebot.com)
 [![GitHub stars](https://img.shields.io/github/stars/smkent/copier-project-generic-temp-test?style=social)](https://github.com/smkent/copier-project-generic-temp-test)
 
+This is a test project for testing test stuff.
+
 ## License
 
 Copyright (C) 2026 Stephen Kent and contributors
