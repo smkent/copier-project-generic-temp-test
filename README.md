@@ -16,6 +16,8 @@ label in the release notes.
 
 Lorem ipsum and all that.
 
+Even more text now.
+
 ## License
 
 Copyright (C) 2026 Stephen Kent and contributors
