@@ -7,7 +7,7 @@ Test project created using copier-project's generic project template
 [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?logo=renovatebot)](https://renovatebot.com)
 [![GitHub stars](https://img.shields.io/github/stars/smkent/copier-project-generic-temp-test?style=social)](https://github.com/smkent/copier-project-generic-temp-test)
 
-This is a test project for testing test stuff.
+This is a test project for testing test stuff. Making another little text tweak.
 
 This is not a real breaking change but I'm making a test change to test the
 label in the release notes.
