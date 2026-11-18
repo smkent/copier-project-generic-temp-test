@@ -6,7 +6,7 @@ copyright_license: GPL-3.0-only
 copyright_year: '2026'
 dependency_cooldown: P1W
 enable_container: false
-enable_coverage: informational
+enable_coverage: false
 enable_docs: true
 enable_features:
 - syrupy
