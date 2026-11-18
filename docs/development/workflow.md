@@ -12,7 +12,8 @@ git clone https://github.com/smkent/copier-project-generic-temp-test
 cd copier-project-generic-temp-test
 ```
 
-Run `mise install` in new repository clones to install tools and git hooks:
+Run `mise install` in new repository clones to install tools, dependencies, and
+git hooks:
 
 ```sh
 mise install
@@ -27,6 +28,15 @@ The `lint` and `test` tasks can also be run as a single combined command with:
 
 ```sh
 mise run lt
+```
+
+### Test snapshots
+
+Some tests compare test results with saved snapshots. Test snapshots can be
+updated by running:
+
+```sh
+mise run snapup
 ```
 
 ## Documentation server

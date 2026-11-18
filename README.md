@@ -1,9 +1,10 @@
 # copier-project-generic-temp-test
 
-Test project created using copier-project's generic project template
+Test project created using copier-project's python project template
 
 [![License](https://img.shields.io/github/license/smkent/copier-project-generic-temp-test)](https://github.com/smkent/copier-project-generic-temp-test/blob/main/COPYING)
 [![CI](https://github.com/smkent/copier-project-generic-temp-test/actions/workflows/ci.yaml/badge.svg)](https://github.com/smkent/copier-project-generic-temp-test/actions/workflows/ci.yaml)
+[![Coverage](https://codecov.io/gh/smkent/copier-project-generic-temp-test/branch/main/graph/badge.svg)](https://codecov.io/gh/smkent/copier-project-generic-temp-test)
 [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?logo=renovatebot)](https://renovatebot.com)
 [![GitHub stars](https://img.shields.io/github/stars/smkent/copier-project-generic-temp-test?style=social)](https://github.com/smkent/copier-project-generic-temp-test)
 

@@ -1,6 +1,6 @@
 [project]
 site_name = "copier-project-generic-temp-test"
-site_description = "Test project created using copier-project's generic project template"
+site_description = "Test project created using copier-project's python project template"
 site_author = "Stephen Kent"
 site_url = "https://smkent.github.io/copier-project-generic-temp-test"
 repo_url = "https://github.com/smkent/copier-project-generic-temp-test"
@@ -19,8 +19,10 @@ nav = [
     ] },
     { "Project Operations" = [
       "setup.md",
+      "releasing.md",
     ] },
   ] },
+  { "API Reference" = "api.md" },
 ]
 
 # ----------------------------------------------------------------------------
@@ -108,3 +110,23 @@ alternate_style = true
 
 [project.markdown_extensions.pymdownx.tasklist]
 custom_checkbox = true
+
+# ----------------------------------------------------------------------------
+# Plugins
+# ----------------------------------------------------------------------------
+[project.plugins.mkdocstrings.handlers.python]
+paths = ["."]
+inventories = ["https://docs.python.org/3/objects.inv"]
+
+[project.plugins.mkdocstrings.handlers.python.options]
+docstring_section_style = "list"
+filters = "public"
+heading_level = 1
+merge_init_into_class = true
+separate_signature = true
+show_root_heading = true
+show_root_full_path = false
+show_signature_annotations = true
+show_source = true
+show_symbol_type_heading = true
+show_symbol_type_toc = true
