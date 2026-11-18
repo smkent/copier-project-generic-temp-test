@@ -59,18 +59,6 @@ jobs:
       - name: 🔥 Test
         run: mise run test
 
-      - name: 🔍 Collect coverage results
-        run: uv run coverage xml
-        if: ${{ matrix.python-version == '3.15' }}
-
-      - name: 📊 Upload coverage to Codecov
-        uses: codecov/codecov-action@v7
-        if: ${{ matrix.python-version == '3.15' }}
-        with:
-          fail_ci_if_error: true
-          use_pypi: true
-          version: 11.3.2
-
   docs:
     name: Documentation
     runs-on: ubuntu-latest
