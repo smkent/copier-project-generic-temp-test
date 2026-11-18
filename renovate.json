@@ -9,7 +9,7 @@
   "minimumReleaseAge": "1 week",
   "packageRules": [
     {
-      "matchManagers": ["github-actions", "mise", "pre-commit"],
+      "matchManagers": ["github-actions", "mise", "pep621", "pre-commit"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "non-major dependencies"
     }

@@ -1,0 +1,139 @@
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
+
+[project]
+name = "copier-project-generic-temp-test"
+dynamic = ["version"]
+description = "Test project created using copier-project's python project template"
+readme = "README.md"
+license = "GPL-3.0-only"
+license-files = ["COPYING"]
+requires-python = ">=3.11"
+authors = [{ name = "Stephen Kent", email = "smkent@smkent.ent" }]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+  "Topic :: Documentation",
+  "Topic :: Software Development",
+  "Topic :: Utilities",
+  "Typing :: Typed",
+]
+keywords = []
+dependencies = []
+
+[project.scripts]
+"copier-project-generic-temp-test" = "copier_project_generic_temp_test.__main__:main"
+
+[project.urls]
+Homepage = "https://smkent.github.io/copier-project-generic-temp-test"
+Repository = "https://github.com/smkent/copier-project-generic-temp-test"
+Issues = "https://github.com/smkent/copier-project-generic-temp-test/issues"
+
+[dependency-groups]
+dev = [
+  "bump-my-version>=1.3.0",
+  "pysentry-rs>=0.5",
+  "pytest-cov>=7",
+  "pytest-sugar>=1",
+  "pytest-xdist>=3",
+  "pytest>=9,<9.2",
+  "ruff>=0.17",
+  "syrupy>=5",
+  "ty>=0.0.84",
+]
+docs = ["mkdocstrings[python]>=1", "zensical>=0.1"]
+
+[tool.bumpversion]
+commit = false
+tag = true
+tag_name = "v{new_version}"
+tag_message = ""
+push_tag = true
+
+[tool.hatch.build.targets.sdist]
+include = ["/copier_project_generic_temp_test", "/tests", "*.md", "COPYING"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["copier_project_generic_temp_test"]
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+[tool.pytest]
+addopts = [
+  "-ra",
+  "--cov=copier_project_generic_temp_test",
+  "--strict-config",
+  "--strict-markers",
+  "--numprocesses",
+  "auto",
+]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["copier_project_generic_temp_test"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+exclude_lines = ["pragma: no cover", "if TYPE_CHECKING:", "@abstractmethod"]
+
+[tool.ruff]
+line-length = 79
+output-format = "concise"
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "ANN401", # Dynamically typed expressions (typing.Any) are disallowed
+  "COM812", # Trailing comma missing
+  "CPY001", # Missing copyright notice at top of file
+  "D1",     # Missing docstring presence rules
+  "EM",     # flake8-errmsg
+  "G004",   # Logging statement uses f-string
+  "PLR",    # pylint Refactor
+  "S607",   # Starting a process with a partial executable path
+  "TD",     # flake8-todos
+  "TRY003", # Avoid specifying long messages outside the exception class
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["copier_project_generic_temp_test"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+  "ARG",  # flake8-unused-arguments
+  "S101", # Use of assert detected
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ty.src]
+include = ["copier_project_generic_temp_test/", "tests/"]
+
+[tool.ty.terminal]
+error-on-warning = true
+output-format = "concise"
+
+[tool.uv]
+cache-keys = [
+  { file = "pyproject.toml" },
+  { git = { commit = true, tags = true } },
+]
+default-groups = ["dev", "docs"]
+exclude-newer = "P1W"
+
+[tool.uv-dynamic-versioning]
+pattern = "default-unprefixed"
+fallback-version = "0.0.0"

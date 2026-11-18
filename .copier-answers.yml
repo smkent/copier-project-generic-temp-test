@@ -5,14 +5,23 @@ copyright_holder: Stephen Kent
 copyright_license: GPL-3.0-only
 copyright_year: '2026'
 dependency_cooldown: P1W
+enable_container: false
+enable_coverage: informational
 enable_docs: true
+enable_features:
+- syrupy
+- xdist
+enable_pypi: false
 github_user: smkent
 llm_contribution_policy: accepted
-project_description: Test project created using copier-project's generic project template
+project_description: Test project created using copier-project's python project template
 project_name: copier-project-generic-temp-test
+project_slug: copier_project_generic_temp_test
 project_type: application
 project_visibility: public
+python_version_maximum: No maximum
+python_version_minimum: '3.11'
 template_attribution: true
-template_variant: generic
+template_variant: python
 user_email: smkent@smkent.ent
 user_name: Stephen Kent

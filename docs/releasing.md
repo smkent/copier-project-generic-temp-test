@@ -76,6 +76,7 @@ mise run release patch|minor|major
 
 When a release tag is created in the GitHub repository:
 
+* A release package is built.
 * A corresponding [GitHub release][github-releases] is created.
 
     [![GitHub Release][github-release-badge]][github-release-latest]
